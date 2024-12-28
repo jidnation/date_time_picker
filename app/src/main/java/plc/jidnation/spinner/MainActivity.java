@@ -1,5 +1,6 @@
 package plc.jidnation.spinner;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -8,6 +9,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -83,5 +85,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setDate(String date) {
+    }
+
+    public void openAlertDialog(View view) {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+        alertBuilder.setMessage("We are just getting started, we will be there in no time.")
+                .setTitle("Word of Motivation")
+                .setPositiveButton("Noted", (dialog, which) -> {
+                }).setNegativeButton("Ok", (dialog, which) -> {
+
+                })
+                .show();
     }
 }
